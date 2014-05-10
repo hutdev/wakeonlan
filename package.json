@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/hutdev/wakeonlan/issues"
   },
-  "homepage": "https://github.com/hutdev/wakeonlan"
+  "homepage": "https://github.com/hutdev/wakeonlan",
+  "dependencies": {
+    "clipp": "0.0.5",
+    "winston": "^0.7.3"
+  }
 }
