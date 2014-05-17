@@ -1,12 +1,13 @@
 "use strict";
 
 var clipp = require('clipp'),
-    cli = clipp.parse(['save','s']),
+    cli = clipp.parse(['save','s','list','l']),
     client = require('dgram').createSocket('udp4'),
     logger = require('./logging'),
     address = clipp.get(['a','address'],cli), 
     machine = clipp.get(['m','machine'],cli), 
     save = clipp.get(['s','save'],cli),
+    list = clipp.get(['l','list'],cli),
     packet = 'FFFFFFFFFFFF',
     db = require('./db');
 
@@ -72,6 +73,18 @@ if (save){
     else{
       logger.info('Saving successful');
       exit(0);
+    }
+  });
+}
+else if(list){
+  db.list(function(err,rows){
+    if(!err){
+      logger.info(JSON.stringify(rows));
+      exit(0);
+    }
+    else{
+      logger.error('Could not list machines',ex);
+      exit(7);
     }
   });
 }
