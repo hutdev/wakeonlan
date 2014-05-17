@@ -21,9 +21,8 @@ function openDatabase(callback){
 }
 
 exports.close = function(callback){
-//Closing the db currently leads to runtime errors.
-/**  if (db)
-    db.close(callback);*/
+  if (db)
+    db.close(callback);
 };
 
 exports.address = function(name,a,b){
