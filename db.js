@@ -38,8 +38,8 @@ exports.address = function(name,a,b){
     }
     else {
       logger.info('Saving mac ' + a + ' for ' + name);
-      //TODO: Replace with db.run
-      db.exec('REPLACE INTO address(mac,machine) VALUES ("' + a + '","' + name + '")',
+      db.run('REPLACE INTO address(mac,machine) VALUES (?,?)',
+        a,name,
         callback);
     }
   });
