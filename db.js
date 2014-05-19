@@ -2,11 +2,13 @@
 
 var sqlite = require('sqlite3'),
     logger = require('./logging'),
+    path = require('path'),
+    dbpath = path.resolve(path.dirname(require('clipp').parse().script),'./machines.db'),
     db;
 
 function openDatabase(callback){
   if(!db){
-    db = new sqlite.Database('machines.db',function(oerr){
+    db = new sqlite.Database(dbpath,function(oerr){
       if (oerr){
         logger.error("Could not open database ", oerr);
         callback(oerr);
