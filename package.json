@@ -1,29 +1,29 @@
 {
-  "name": "wakeonlan",
-  "version": "0.0.0",
-  "description": "Tool for starting computers via the network.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hutdev/wakeonlan.git"
-  },
-  "keywords": [
-    "WOL",
-    "wakeonlan",
-    "wake on lan"
-  ],
-  "author": "hut",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hutdev/wakeonlan/issues"
-  },
-  "homepage": "https://github.com/hutdev/wakeonlan",
-  "dependencies": {
-    "clipp": "0.0.5",
-    "sqlite3": "^2.2.3",
-    "winston": "^0.7.3"
-  }
+    "name": "wakeonlan",
+    "version": "0.0.0",
+    "description": "Tool for starting computers via the network.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hutdev/wakeonlan.git"
+    },
+    "keywords": [
+        "WOL",
+        "wakeonlan",
+        "wake on lan"
+    ],
+    "author": "hut",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hutdev/wakeonlan/issues"
+    },
+    "homepage": "https://github.com/hutdev/wakeonlan",
+    "dependencies": {
+        "clipp": "0.0.5",
+        "sqlite3": "^2.2.3",
+        "winston": "^0.7.3"
+    }
 }
